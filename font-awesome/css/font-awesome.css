@@ -579,6 +579,7 @@
 }
 .fa-linkedin-square:before {
   content: "\f08c";
+  color: #313131;
 }
 .fa-thumb-tack:before {
   content: "\f08d";
@@ -623,6 +624,7 @@
 }
 .fa-github:before {
   content: "\f09b";
+  color: #313131;
 }
 .fa-unlock:before {
   content: "\f09c";
@@ -942,6 +944,7 @@
 }
 .fa-github-alt:before {
   content: "\f113";
+  color: #313131;
 }
 .fa-folder-o:before {
   content: "\f114";
