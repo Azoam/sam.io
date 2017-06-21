@@ -594,6 +594,7 @@
 }
 .fa-github-square:before {
   content: "\f092";
+  color: #313131;
 }
 .fa-upload:before {
   content: "\f093";
@@ -792,6 +793,7 @@
 }
 .fa-linkedin:before {
   content: "\f0e1";
+  color: #313131;
 }
 .fa-rotate-left:before,
 .fa-undo:before {
