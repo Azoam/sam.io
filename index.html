@@ -108,7 +108,7 @@
                                 <h4>
                                     <strong>Systems Administrator @ OSS</strong>
                                 </h4>
-                                <p>I am currently employed by Open System Solutions at Rutgers where I help maintain several core systems
+                                <p>I am currently employed by Open Software Solutions at Rutgers where I help maintain several core systems
                                    at Rutgers and help develop applications for students such as: A url shortner, a mobile application for Rutgers, etc.</p>
                                    <br><br><br><br><br><br><br>
 
@@ -307,7 +307,29 @@
                 });
             }
         }
+    });
+    // Disable Google Maps scrolling
+    // See http://stackoverflow.com/a/25904582/1607849
+    // Disable scroll zooming and bind back the click event
+    var onMapMouseleaveHandler = function(event) {
+        var that = $(this);
+        that.on('click', onMapClickHandler);
+        that.off('mouseleave', onMapMouseleaveHandler);
+        that.find('iframe').css("pointer-events", "none");
+    }
+    var onMapClickHandler = function(event) {
+            var that = $(this);
+            // Disable the click handler until the user leaves the map area
+            that.off('click', onMapClickHandler);
+            // Enable scrolling zoom
+            that.find('iframe').css("pointer-events", "auto");
+            // Handle the mouse leave event
+            that.on('mouseleave', onMapMouseleaveHandler);
+        }
+        // Enable map zooming with mouse scroll when the user clicks the map
+    $('.map').on('click', onMapClickHandler);
     </script>
+
 
 </body>
 
