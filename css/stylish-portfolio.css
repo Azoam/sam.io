@@ -182,7 +182,8 @@ hr.small {
 
 .callout {
     display: table;
-    width: 100%;
+    max-width: 100%;
+    width: auto;
     height: 400px;
     color: #fff;
     background: url(../img/callout.gif) no-repeat center center scroll;
